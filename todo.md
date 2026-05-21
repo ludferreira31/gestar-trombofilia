@@ -122,3 +122,18 @@
 - [x] Zero erros de lint (apenas warnings)
 - [x] Testes unitários (12 testes passando)
 - [x] Checkpoint final
+
+
+## PWA e Distribuição Web
+- [x] Criar manifest.json com configurações PWA
+- [x] Criar Service Worker com offline support
+- [x] Criar hook usePWA para gerenciar estado PWA
+- [x] Adicionar OfflineBanner ao layout
+- [x] Criar arquivo index.html otimizado
+- [x] Criar web.config.js com otimizações
+- [x] Criar DEPLOYMENT.md com guias de distribuição
+- [x] Animação discreta de entrada da logo no onboarding
+- [ ] Deploy em Vercel/Netlify (próxima etapa)
+- [ ] Configurar domínio customizado (próxima etapa)
+- [ ] Configurar notificações push (versão futura)
+- [ ] Implementar sincronização na nuvem (versão futura)

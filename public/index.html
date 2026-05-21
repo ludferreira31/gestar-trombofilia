@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#C9748F" />
+  <meta name="description" content="Um espaço acolhedor, educativo e estratégico para mulheres com trombofilia na jornada gestacional" />
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Apple Web App -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Gestar" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+  
+  <!-- Splash Screen for iOS -->
+  <link rel="apple-touch-startup-image" href="/splash-icon.png" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gestar com Trombofilia" />
+  <meta property="og:description" content="Um espaço acolhedor, educativo e estratégico para mulheres com trombofilia na jornada gestacional" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gestar-trombofilia.com" />
+  <meta property="og:image" content="/icon-512.png" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gestar com Trombofilia" />
+  <meta name="twitter:description" content="Um espaço acolhedor, educativo e estratégico para mulheres com trombofilia na jornada gestacional" />
+  <meta name="twitter:image" content="/icon-512.png" />
+  
+  <!-- Styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    body {
+      background-color: #FDF8F5;
+      color: #2D1B2E;
+      overflow: hidden;
+    }
+    
+    #root {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Loading screen */
+    .splash-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #FDF8F5 0%, #FFF0F3 100%);
+      z-index: 9999;
+    }
+    
+    .splash-logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 24px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    
+    .splash-text {
+      font-size: 24px;
+      font-weight: 600;
+      color: #2D1B2E;
+      margin-bottom: 8px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out 0.2s both;
+    }
+    
+    .splash-subtitle {
+      font-size: 14px;
+      color: #8B7B8B;
+      text-align: center;
+      max-width: 280px;
+      animation: fadeIn 1s ease-in-out 0.4s both;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    /* Prevent zoom on iOS */
+    input, select, textarea {
+      font-size: 16px;
+    }
+    
+    /* Safe area support */
+    @supports (padding: max(0px)) {
+      body {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+        padding-top: max(0px, env(safe-area-inset-top));
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
+      }
+    }
+  </style>
+  
+  <title>Gestar com Trombofilia</title>
+</head>
+<body>
+  <div id="root">
+    <div class="splash-screen" id="splash">
+      <img src="/icon-192.png" alt="Gestar com Trombofilia" class="splash-logo" />
+      <div class="splash-text">Gestar com Trombofilia</div>
+      <div class="splash-subtitle">Carregando...</div>
+    </div>
+  </div>
+  
+  <script>
+    // Hide splash screen when app is ready
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('splash');
+      if (splash) {
+        setTimeout(() => {
+          splash.style.opacity = '0';
+          splash.style.transition = 'opacity 0.3s ease-out';
+          setTimeout(() => splash.remove(), 300);
+        }, 500);
+      }
+    });
+    
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+    
+    // Prevent pinch zoom on iOS
+    document.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  </script>
+</body>
+</html>
