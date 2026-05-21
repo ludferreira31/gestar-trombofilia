@@ -1,4 +1,4 @@
-// Service Worker para Gestar com Trombofilia
+// Service Worker para GESTAR
 // Versão: 1.0.0
 
 const CACHE_NAME = 'gestar-v1.0.0';
@@ -160,7 +160,7 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification(data.title || 'Gestar com Trombofilia', options)
+    self.registration.showNotification(data.title || 'GESTAR', options)
   );
 });
 

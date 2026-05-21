@@ -228,9 +228,9 @@ export default function HomeScreen() {
             </TouchableOpacity>
           ))}
 
-          {/* GSTAR Updates */}
+          {/* GESTAR Updates */}
           <Text style={{ fontSize: 16, fontWeight: '700', color: '#2D1B2E', marginTop: 8, marginBottom: 12 }}>
-            Projeto GSTAR
+            Projeto GESTAR
           </Text>
           <View style={{ backgroundColor: 'white', borderRadius: 16, padding: 16, borderWidth: 1, borderColor: '#EDD9E0' }}>
             <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }}>

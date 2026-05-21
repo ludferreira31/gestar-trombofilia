@@ -159,7 +159,7 @@ export default function ProfileScreen() {
           </TouchableOpacity>
 
           <Text style={{ textAlign: 'center', color: '#8B7B8B', fontSize: 12, marginTop: 24 }}>
-            Gestar com Trombofilia v1.0{'\n'}
+            GESTAR v1.0{'\n'}
             Feito com 💜 para todas as guerreiras
           </Text>
         </View>

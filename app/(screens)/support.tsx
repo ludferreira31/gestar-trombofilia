@@ -17,7 +17,7 @@ Cada perda é única. Cada dor é legítima. Não existe tempo certo para o luto
 
 Você tem o direito de chorar, de sentir raiva, de questionar, de lembrar. Você tem o direito de honrar cada vida que passou por você, independentemente do tempo que ficou.
 
-Se você está passando por uma perda, saiba que o Gestar com Trombofilia caminha ao seu lado. Nossa comunidade é formada por mulheres que entendem sua dor — porque muitas delas também passaram por ela.
+Se você está passando por uma perda, saiba que o GESTAR caminha ao seu lado. Nossa comunidade é formada por mulheres que entendem sua dor — porque muitas delas também passaram por ela.
 
 Você é forte. Você é corajosa. E quando estiver pronta, estaremos aqui.`,
   },
@@ -33,7 +33,7 @@ Mas também é real a força que você descobre em si mesma. A forma como você 
 
 Bebês prematuros são guerreiros. E suas mães, também.
 
-O Gestar com Trombofilia reconhece que a prematuridade muitas vezes está ligada à trombofilia e às complicações vasculares placentárias. Você não fez nada de errado. Você fez tudo o que estava ao seu alcance.`,
+O GESTAR reconhece que a prematuridade muitas vezes está ligada à trombofilia e às complicações vasculares placentárias. Você não fez nada de errado. Você fez tudo o que estava ao seu alcance.`,
   },
   {
     id: 'luto',
@@ -59,7 +59,7 @@ Lembrar não é fraqueza. Honrar é amor.`,
 
 Mas você não precisa carregar isso sozinha.
 
-O Gestar com Trombofilia nasceu para ser seu espaço seguro. Um lugar onde você pode ser honesta sobre seus medos, celebrar suas conquistas e encontrar outras mulheres que entendem exatamente o que você está vivendo.
+O GESTAR nasceu para ser seu espaço seguro. Um lugar onde você pode ser honesta sobre seus medos, celebrar suas conquistas e encontrar outras mulheres que entendem exatamente o que você está vivendo.
 
 Você é mais do que sua trombofilia. Você é uma mulher extraordinária que escolhe lutar todos os dias pelo maior amor da sua vida.`,
   },
@@ -68,7 +68,7 @@ Você é mais do que sua trombofilia. Você é uma mulher extraordinária que es
 const RESOURCES = [
   { icon: '📞', title: 'CVV — Centro de Valorização da Vida', subtitle: 'Ligue 188 (24h)', color: '#D4697A' },
   { icon: '🧠', title: 'Psicólogo Online', subtitle: 'Busque apoio profissional especializado', color: '#8B6F9E' },
-  { icon: '👥', title: 'Grupos de Apoio', subtitle: 'Comunidade Gestar com Trombofilia', color: '#6BAF8A' },
+  { icon: '👥', title: 'Grupos de Apoio', subtitle: 'Comunidade GESTAR', color: '#6BAF8A' },
   { icon: '📚', title: 'Leitura Recomendada', subtitle: 'Livros sobre luto e maternidade', color: '#E8B86D' },
 ];
 

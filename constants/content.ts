@@ -1,7 +1,7 @@
 export const ONBOARDING_SLIDES = [
   {
     id: 1,
-    title: 'Bem-vinda ao\nGestar com Trombofilia',
+    title: 'Bem-vinda ao\nGESTAR',
     subtitle: 'Um espaço criado com amor para mulheres que enfrentam a trombofilia na jornada gestacional.',
     image: require('@/assets/images/icon.png'),
     bg: '#FDF8F5',

@@ -60,7 +60,7 @@ export default function ServicesScreen() {
           <View style={{ backgroundColor: '#F5EDF8', borderRadius: 20, padding: 20, marginBottom: 20, alignItems: 'center', borderWidth: 1.5, borderColor: '#C9748F' }}>
             <Text style={{ fontSize: 40, marginBottom: 12 }}>💜</Text>
             <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2D1B2E', textAlign: 'center', marginBottom: 8 }}>
-              Gestar com Trombofilia
+              GESTAR
             </Text>
             <Text style={{ fontSize: 14, color: '#8B7B8B', textAlign: 'center', lineHeight: 22 }}>
               Consultoria especializada para mulheres com trombofilia em todas as fases da jornada gestacional.

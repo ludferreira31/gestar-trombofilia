@@ -31,7 +31,7 @@ export default function PartnersScreen() {
         <View style={{ padding: 16 }}>
           <View style={{ backgroundColor: '#F0FFF4', borderRadius: 16, padding: 14, marginBottom: 16, borderWidth: 1, borderColor: '#6BAF8A' }}>
             <Text style={{ fontSize: 13, color: '#2D1B2E', lineHeight: 20 }}>
-              Como paciente do Gestar com Trombofilia, você tem acesso a benefícios exclusivos junto aos nossos parceiros.
+              Como paciente do GESTAR, você tem acesso a benefícios exclusivos junto aos nossos parceiros.
             </Text>
           </View>
 

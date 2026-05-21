@@ -57,7 +57,7 @@ export default function PremiumScreen() {
           text: 'Ativar Demo',
           onPress: async () => {
             await activatePremium();
-            Alert.alert('Premium Ativado! 💜', 'Bem-vinda à área premium do Gestar com Trombofilia!', [
+            Alert.alert('Premium Ativado! 💜', 'Bem-vinda à área premium do GESTAR!', [
               { text: 'Explorar', onPress: () => router.back() },
             ]);
           },
@@ -80,7 +80,7 @@ export default function PremiumScreen() {
             <Text style={{ fontSize: 60, marginBottom: 16 }}>💜</Text>
             <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#2D1B2E', marginBottom: 8 }}>Você é Premium!</Text>
             <Text style={{ fontSize: 16, color: '#8B7B8B', textAlign: 'center', lineHeight: 24 }}>
-              Você tem acesso a todos os recursos exclusivos do Gestar com Trombofilia.
+              Você tem acesso a todos os recursos exclusivos do GESTAR.
             </Text>
           </View>
         </ScrollView>

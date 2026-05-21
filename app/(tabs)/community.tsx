@@ -10,7 +10,7 @@ const COMMUNITY_SECTIONS = [
   { id: 'nascimentos', icon: '🌈', label: 'Mural de Nascimentos', color: '#6BAF8A', bg: '#F0FFF4', route: '/(screens)/community/births' },
   { id: 'legislativo', icon: '⚖️', label: 'Vitórias Legislativas', color: '#8B6F9E', bg: '#F5F0FF', route: '/(screens)/community/legislative' },
   { id: 'campanhas', icon: '📣', label: 'Campanhas de Conscientização', color: '#E8B86D', bg: '#FFF8F0', route: '/(screens)/community/campaigns' },
-  { id: 'gstar', icon: '🌟', label: 'Projeto GSTAR', color: '#7BB8D4', bg: '#F0F8FF', route: '/(screens)/community/gstar' },
+  { id: 'gestar', icon: '🌟', label: 'Projeto GESTAR', color: '#7BB8D4', bg: '#F0F8FF', route: '/(screens)/community/gestar' },
 ];
 
 export default function CommunityScreen() {

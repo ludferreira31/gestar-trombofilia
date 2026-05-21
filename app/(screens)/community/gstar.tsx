@@ -9,7 +9,7 @@ const UPDATES = [
     id: '1',
     version: 'v1.0',
     date: 'Maio 2026',
-    title: 'Lançamento do Gestar com Trombofilia',
+    title: 'Lançamento do GESTAR',
     content: 'Lançamento oficial do aplicativo com todos os módulos principais: Jornada Gestacional, Manual do Gestar, Comunidade e Recursos Inteligentes.',
     highlights: ['Linha do Tempo Gestacional', 'Controle de Medicações', '15 Guias Especializados', 'Comunidade Gestar', 'Área FIV'],
     type: 'launch',
@@ -25,7 +25,7 @@ const UPDATES = [
   },
 ];
 
-export default function GSTARScreen() {
+export default function GESTARScreen() {
   const router = useRouter();
 
   return (
@@ -35,7 +35,7 @@ export default function GSTARScreen() {
           <MaterialIcons name="arrow-back-ios" size={22} color="white" />
         </TouchableOpacity>
         <View style={{ flex: 1 }}>
-          <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Projeto GSTAR</Text>
+          <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Projeto GESTAR</Text>
           <Text style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13 }}>Atualizações e novidades</Text>
         </View>
       </View>
@@ -45,10 +45,10 @@ export default function GSTARScreen() {
           <View style={{ backgroundColor: '#F5EDF8', borderRadius: 20, padding: 20, marginBottom: 20, alignItems: 'center', borderWidth: 1.5, borderColor: '#C9748F' }}>
             <Text style={{ fontSize: 48, marginBottom: 12 }}>🌟</Text>
             <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2D1B2E', textAlign: 'center', marginBottom: 8 }}>
-              Projeto GSTAR
+              Projeto GESTAR
             </Text>
             <Text style={{ fontSize: 14, color: '#8B7B8B', textAlign: 'center', lineHeight: 22 }}>
-              O Gestar com Trombofilia é um projeto vivo, que cresce com a comunidade. Acompanhe as novidades e faça parte dessa história.
+              O GESTAR é um projeto vivo, que cresce com a comunidade. Acompanhe as novidades e faça parte dessa história.
             </Text>
           </View>
 

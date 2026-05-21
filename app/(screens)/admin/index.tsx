@@ -51,7 +51,7 @@ export default function AdminScreen() {
         </TouchableOpacity>
         <View style={{ flex: 1 }}>
           <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Painel Administrativo</Text>
-          <Text style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13 }}>Gestar com Trombofilia</Text>
+          <Text style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13 }}>GESTAR</Text>
         </View>
       </View>
 
