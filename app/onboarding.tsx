@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   Dimensions,
   TextInput,
-  Animated,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { storage } from '@/lib/storage';
@@ -22,15 +21,7 @@ export default function OnboardingScreen() {
   const [dum, setDum] = useState('');
   const router = useRouter();
   const { setProfile } = useUser();
-  const logoOpacity = React.useRef(new Animated.Value(0)).current;
 
-  useEffect(() => {
-    Animated.timing(logoOpacity, {
-      toValue: 1,
-      duration: 800,
-      useNativeDriver: true,
-    }).start();
-  }, [step]);
 
   const handleNext = () => {
     if (step < ONBOARDING_SLIDES.length - 1) {
@@ -66,13 +57,11 @@ export default function OnboardingScreen() {
     return (
       <View style={{ flex: 1, backgroundColor: slide.bg }}>
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 }}>
-          <Animated.View style={{ opacity: logoOpacity }}>
-            <Image
-              source={slide.image}
-              style={{ width: 180, height: 180, marginBottom: 40, borderRadius: 90 }}
-              resizeMode="contain"
-            />
-          </Animated.View>
+          <Image
+            source={slide.image}
+            style={{ width: 180, height: 180, marginBottom: 40, borderRadius: 90 }}
+            resizeMode="contain"
+          />
           <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#2D1B2E', textAlign: 'center', marginBottom: 16, lineHeight: 36 }}>
             {slide.title}
           </Text>

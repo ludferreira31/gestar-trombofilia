@@ -44,7 +44,7 @@ const FAQ_ITEMS = [
     questions: [
       {
         q: 'Com que frequência devo fazer ultrassom?',
-        a: 'Gestantes com trombofilia geralmente têm monitoramento mais frequente. Além dos ultrassons de rotina (morfológico, crescimento), podem ser necessários dopplers mensais ou quinzenais a partir do 2º trimestre, dependendo do caso.',
+        a: 'Gestantes com trombofilia geralmente têm monitoramento mais frequente. Além dos ultrassons de rotina, morfológicos e de crescimento, é necessário realizar Doppler mensal a partir de 12 semanas ou quinzenalmente a partir do segundo trimestre, dependendo do caso. O ideal é realizar Doppler em todas as ultrassonografias.',
       },
       {
         q: 'O que é o doppler obstétrico?',

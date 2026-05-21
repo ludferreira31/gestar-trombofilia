@@ -67,9 +67,10 @@ Você é mais do que sua trombofilia. Você é uma mulher extraordinária que es
 
 const RESOURCES = [
   { icon: '📞', title: 'CVV — Centro de Valorização da Vida', subtitle: 'Ligue 188 (24h)', color: '#D4697A' },
-  { icon: '🧠', title: 'Psicólogo Online', subtitle: 'Busque apoio profissional especializado', color: '#8B6F9E' },
-  { icon: '👥', title: 'Grupos de Apoio', subtitle: 'Comunidade GESTAR', color: '#6BAF8A' },
+  { icon: '👩‍⚕️', title: 'Psicólogas Parceiras', subtitle: 'Profissionais especializadas em luto', color: '#8B6F9E' },
+  { icon: '📱', title: 'Instagram GESTAR', subtitle: 'Conecte-se com a comunidade', color: '#6BAF8A' },
   { icon: '📚', title: 'Leitura Recomendada', subtitle: 'Livros sobre luto e maternidade', color: '#E8B86D' },
+  { icon: '💬', title: 'Contato via WhatsApp', subtitle: '+55 11 95835-0929', color: '#25D366' },
 ];
 
 export default function SupportScreen() {
@@ -150,20 +151,7 @@ export default function SupportScreen() {
             </View>
           ))}
 
-          {/* Community Link */}
-          <TouchableOpacity
-            onPress={() => router.push('/(tabs)/community')}
-            style={{ backgroundColor: '#C9748F', borderRadius: 18, padding: 18, marginTop: 8, flexDirection: 'row', alignItems: 'center' }}
-          >
-            <Text style={{ fontSize: 32, marginRight: 14 }}>👥</Text>
-            <View style={{ flex: 1 }}>
-              <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold' }}>Comunidade Gestar</Text>
-              <Text style={{ color: 'rgba(255,255,255,0.85)', fontSize: 13, marginTop: 3 }}>
-                Conecte-se com outras mulheres que entendem sua jornada
-              </Text>
-            </View>
-            <MaterialIcons name="chevron-right" size={24} color="white" />
-          </TouchableOpacity>
+
         </View>
       </ScrollView>
     </ScreenContainer>

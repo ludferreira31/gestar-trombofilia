@@ -18,27 +18,30 @@ const PREMIUM_FEATURES = [
 
 const PLANS = [
   {
-    id: 'monthly',
-    label: 'Mensal',
-    price: 'R$ 29,90',
+    id: 'tentantes',
+    label: 'Plano Tentantes',
+    subtitle: 'Investigação Pré-Concepcional',
+    price: 'R$ 297,90',
     period: '/mês',
     badge: null,
     color: '#8B6F9E',
   },
   {
-    id: 'quarterly',
-    label: 'Trimestral',
-    price: 'R$ 69,90',
-    period: '/3 meses',
-    badge: '🔥 Mais Popular',
+    id: 'fiv',
+    label: 'Plano FIV',
+    subtitle: 'Reprodução Assistida',
+    price: 'R$ 349,90',
+    period: '/mês',
+    badge: null,
     color: '#C9748F',
   },
   {
-    id: 'annual',
-    label: 'Anual',
-    price: 'R$ 199,90',
-    period: '/ano',
-    badge: '💜 Melhor Valor',
+    id: 'gestantes',
+    label: 'Plano Gestantes',
+    subtitle: 'Acompanhamento Completo',
+    price: 'R$ 448,70',
+    period: '/mês',
+    badge: null,
     color: '#7BB8D4',
   },
 ];
@@ -96,7 +99,7 @@ export default function PremiumScreen() {
         </TouchableOpacity>
         <View style={{ flex: 1 }}>
           <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Área Premium</Text>
-          <Text style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13 }}>Acesso completo ao Gestar</Text>
+          <Text style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13 }}>Escolha o plano ideal para você</Text>
         </View>
       </View>
 
@@ -156,6 +159,9 @@ export default function PremiumScreen() {
                     </View>
                   )}
                 </View>
+                {plan.subtitle && (
+                  <Text style={{ fontSize: 12, color: '#8B7B8B', marginBottom: 6 }}>{plan.subtitle}</Text>
+                )}
                 <Text style={{ fontSize: 22, fontWeight: 'bold', color: plan.color }}>
                   {plan.price}<Text style={{ fontSize: 14, fontWeight: '400', color: '#8B7B8B' }}>{plan.period}</Text>
                 </Text>

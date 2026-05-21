@@ -29,7 +29,7 @@ export default function EditProfileScreen() {
       Alert.alert('Atenção', 'Informe seu nome.');
       return;
     }
-    await updateProfile({ ...profile, ...form });
+    await updateProfile(form);
     Alert.alert('Salvo!', 'Perfil atualizado com sucesso.', [
       { text: 'OK', onPress: () => router.back() },
     ]);
