@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, View, Text, TouchableOpacity, FlatList } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, FlatList, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
 import { MaterialIcons } from '@expo/vector-icons';
 import { ScreenContainer } from '@/components/screen-container';
@@ -56,7 +56,13 @@ export default function CommunityScreen() {
               {COMMUNITY_SECTIONS.map((section) => (
                 <TouchableOpacity
                   key={section.id}
-                  onPress={() => router.push(section.route as any)}
+                  onPress={() => {
+                    if (section.id === 'gestar') {
+                      Linking.openURL('https://www.instagram.com/gestarcomtrombofilia?igsh=bW0yZ3pubTZ2eHBz').catch(err => console.error('Erro ao abrir Instagram:', err));
+                    } else {
+                      router.push(section.route as any);
+                    }
+                  }}
                   activeOpacity={0.8}
                   style={{
                     backgroundColor: section.bg,
