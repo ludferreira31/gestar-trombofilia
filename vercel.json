@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx expo export --platform web",
+  "buildCommand": "echo 'Build skipped - using pre-built dist'",
   "outputDirectory": "dist",
   "headers": [
     {
@@ -42,11 +42,10 @@
       ]
     }
   ],
-  "redirects": [
+  "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index.html",
-      "statusCode": 307
+      "destination": "/index.html"
     }
   ]
 }
