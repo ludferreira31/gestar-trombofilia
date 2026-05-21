@@ -84,7 +84,7 @@ export default function ServicesScreen() {
 
           {/* CTA */}
           <TouchableOpacity
-            onPress={() => Linking.openURL('https://wa.me/5500000000000')}
+            onPress={() => Linking.openURL('https://wa.me/5511958350929')}
             style={{ backgroundColor: '#25D366', borderRadius: 18, padding: 18, flexDirection: 'row', alignItems: 'center', marginTop: 8 }}
           >
             <Text style={{ fontSize: 32, marginRight: 14 }}>💬</Text>

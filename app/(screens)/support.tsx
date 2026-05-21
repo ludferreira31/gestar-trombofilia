@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
 import { MaterialIcons } from '@expo/vector-icons';
 import { ScreenContainer } from '@/components/screen-container';
@@ -65,17 +65,37 @@ Você é mais do que sua trombofilia. Você é uma mulher extraordinária que es
   },
 ];
 
+const PSYCHOLOGISTS = [
+  {
+    id: 1,
+    title: 'Psicóloga Parceira',
+    specialty: 'Especialista em luto parental',
+    instagram: 'https://www.instagram.com/falecomapsicologa?igsh=MTNmZm5xeWJ4MnY3',
+    color: '#8B6F9E',
+  },
+  {
+    id: 2,
+    title: 'Psicóloga Parceira',
+    specialty: 'Especialista em saúde mental gestacional',
+    instagram: 'https://www.instagram.com/nicolesantospsi?igsh=OHM5Ynk2aGdnYWFs',
+    color: '#8B6F9E',
+  },
+];
+
 const RESOURCES = [
   { icon: '📞', title: 'CVV — Centro de Valorização da Vida', subtitle: 'Ligue 188 (24h)', color: '#D4697A' },
-  { icon: '👩‍⚕️', title: 'Psicólogas Parceiras', subtitle: 'Profissionais especializadas em luto', color: '#8B6F9E' },
-  { icon: '📱', title: 'Instagram GESTAR', subtitle: 'Conecte-se com a comunidade', color: '#6BAF8A' },
+  { icon: '📱', title: 'Instagram Gestar com Trombofilia', subtitle: 'Conecte-se com a comunidade', color: '#6BAF8A', link: 'https://www.instagram.com/gestarcomtrombofilia?igsh=bW0yZ3pubTZ2eHBz' },
   { icon: '📚', title: 'Leitura Recomendada', subtitle: 'Livros sobre luto e maternidade', color: '#E8B86D' },
-  { icon: '💬', title: 'Contato via WhatsApp', subtitle: '+55 11 95835-0929', color: '#25D366' },
+  { icon: '💬', title: 'Contato via WhatsApp', subtitle: '+55 11 95835-0929', color: '#25D366', link: 'https://wa.me/5511958350929' },
 ];
 
 export default function SupportScreen() {
   const router = useRouter();
-  const [expanded, setExpanded] = useState<string | null>('perda');
+  const [expanded, setExpanded] = React.useState<string | null>('perda');
+
+  const handleOpenLink = (url: string) => {
+    Linking.openURL(url).catch(err => console.error('Erro ao abrir link:', err));
+  };
 
   return (
     <ScreenContainer>
@@ -99,35 +119,30 @@ export default function SupportScreen() {
               Um espaço criado com amor
             </Text>
             <Text style={{ fontSize: 14, color: '#8B7B8B', textAlign: 'center', lineHeight: 22 }}>
-              Este espaço foi criado para acolher, validar e apoiar mulheres em momentos de dor, luto e incerteza. Aqui, sua experiência importa.
+              Para mulheres que enfrentam perdas, prematuridade, luto e a jornada emocional da trombofilia.
             </Text>
           </View>
 
-          {/* Sections */}
+          {/* Support Sections */}
           {SUPPORT_SECTIONS.map((section) => (
             <View key={section.id} style={{ marginBottom: 12 }}>
               <TouchableOpacity
                 onPress={() => setExpanded(expanded === section.id ? null : section.id)}
-                activeOpacity={0.8}
                 style={{
-                  backgroundColor: expanded === section.id ? section.bg : 'white',
-                  borderRadius: expanded === section.id ? 20 : 16,
-                  padding: 18,
-                  borderWidth: 1.5,
-                  borderColor: expanded === section.id ? section.color : '#EDD9E0',
+                  backgroundColor: section.bg,
+                  borderRadius: 16,
+                  padding: 16,
                   flexDirection: 'row',
                   alignItems: 'center',
+                  borderWidth: 1.5,
+                  borderColor: section.color,
                 }}
               >
-                <Text style={{ fontSize: 28, marginRight: 14 }}>{section.icon}</Text>
-                <Text style={{ flex: 1, fontSize: 15, fontWeight: '700', color: expanded === section.id ? section.color : '#2D1B2E', lineHeight: 22 }}>
-                  {section.title}
-                </Text>
-                <MaterialIcons
-                  name={expanded === section.id ? 'expand-less' : 'expand-more'}
-                  size={24}
-                  color={section.color}
-                />
+                <Text style={{ fontSize: 28, marginRight: 12 }}>{section.icon}</Text>
+                <View style={{ flex: 1 }}>
+                  <Text style={{ fontSize: 14, fontWeight: '700', color: '#2D1B2E' }}>{section.title}</Text>
+                </View>
+                <MaterialIcons name={expanded === section.id ? 'expand-less' : 'expand-more'} size={24} color={section.color} />
               </TouchableOpacity>
               {expanded === section.id && (
                 <View style={{ backgroundColor: section.bg, borderRadius: 16, padding: 18, marginTop: -8, borderWidth: 1, borderColor: section.color, borderTopWidth: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0 }}>
@@ -137,10 +152,33 @@ export default function SupportScreen() {
             </View>
           ))}
 
+          {/* Psychologists */}
+          <Text style={{ fontSize: 15, fontWeight: '700', color: '#2D1B2E', marginTop: 20, marginBottom: 14 }}>Psicólogas Parceiras</Text>
+          {PSYCHOLOGISTS.map((psy) => (
+            <TouchableOpacity
+              key={psy.id}
+              onPress={() => handleOpenLink(psy.instagram)}
+              style={{ backgroundColor: 'white', borderRadius: 16, padding: 16, marginBottom: 10, flexDirection: 'row', alignItems: 'center', borderWidth: 1.5, borderColor: psy.color }}
+            >
+              <View style={{ width: 44, height: 44, borderRadius: 12, backgroundColor: psy.color + '20', alignItems: 'center', justifyContent: 'center', marginRight: 14 }}>
+                <Text style={{ fontSize: 22 }}>👩‍⚕️</Text>
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={{ fontSize: 14, fontWeight: '700', color: '#2D1B2E' }}>{psy.title}</Text>
+                <Text style={{ fontSize: 13, color: '#8B7B8B', marginTop: 2 }}>{psy.specialty}</Text>
+              </View>
+              <MaterialIcons name="open-in-new" size={20} color={psy.color} />
+            </TouchableOpacity>
+          ))}
+
           {/* Resources */}
-          <Text style={{ fontSize: 15, fontWeight: '700', color: '#2D1B2E', marginTop: 8, marginBottom: 14 }}>Recursos de Apoio</Text>
+          <Text style={{ fontSize: 15, fontWeight: '700', color: '#2D1B2E', marginTop: 20, marginBottom: 14 }}>Recursos de Apoio</Text>
           {RESOURCES.map((resource, i) => (
-            <View key={i} style={{ backgroundColor: 'white', borderRadius: 16, padding: 16, marginBottom: 10, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: '#EDD9E0' }}>
+            <TouchableOpacity
+              key={i}
+              onPress={() => resource.link && handleOpenLink(resource.link)}
+              style={{ backgroundColor: 'white', borderRadius: 16, padding: 16, marginBottom: 10, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: '#EDD9E0' }}
+            >
               <View style={{ width: 44, height: 44, borderRadius: 12, backgroundColor: resource.color + '20', alignItems: 'center', justifyContent: 'center', marginRight: 14 }}>
                 <Text style={{ fontSize: 22 }}>{resource.icon}</Text>
               </View>
@@ -148,9 +186,9 @@ export default function SupportScreen() {
                 <Text style={{ fontSize: 14, fontWeight: '700', color: '#2D1B2E' }}>{resource.title}</Text>
                 <Text style={{ fontSize: 13, color: '#8B7B8B', marginTop: 2 }}>{resource.subtitle}</Text>
               </View>
-            </View>
+              {resource.link && <MaterialIcons name="open-in-new" size={20} color={resource.color} />}
+            </TouchableOpacity>
           ))}
-
 
         </View>
       </ScrollView>
