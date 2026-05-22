@@ -1,5 +1,5 @@
 {
-  "buildCommand": "echo 'Build skipped - using pre-built dist'",
+  "buildCommand": "npx expo export --platform web",
   "outputDirectory": "dist",
   "headers": [
     {
