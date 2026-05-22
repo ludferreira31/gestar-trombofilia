@@ -13,7 +13,9 @@ const TRIMESTER_INFO = [
 ];
 
 const WEEKLY_CONTENT: Record<number, { baby: string; mom: string; tip: string }> = {
-  4: { baby: 'O embrião tem o tamanho de um grão de papoula. A implantação está ocorrendo.', mom: 'Você pode sentir cólicas leves e spotting de implantação.', tip: 'Inicie a suplementação se ainda não começou. Confirme a gestação com beta-HCG.' },
+  2: { baby: 'O embrião tem o tamanho de uma cabeça de alfinete (0,1-0,2mm). Implantação começando.', mom: 'Você pode não sentir nada ainda. O corpo começa a produzir hCG.', tip: 'Faça um teste de gravidez se suspeitar. Comece a tomar ácido fólico se ainda não faz.' },
+  3: { baby: 'O embrião tem o tamanho de uma lentilha (0,5-1mm). Formação do saco gestacional.', mom: 'Possível leve desconforto abdominal. Mamas podem ficar sensíveis.', tip: 'Agende uma ultrassom transvaginal para confirmar a gestação.' },
+  4: { baby: 'O embrião tem o tamanho de um grão de papoula (1-2mm). A implantação está ocorrendo.', mom: 'Você pode sentir cólicas leves e spotting de implantação.', tip: 'Inicie a suplementação se ainda não começou. Confirme a gestação com beta-HCG.' },
   6: { baby: 'O coração começa a bater! O embrião tem cerca de 6mm.', mom: 'Náuseas matinais podem começar. Seios sensíveis são comuns.', tip: 'Agende sua primeira consulta pré-natal e ultrassom transvaginal.' },
   8: { baby: 'Todos os órgãos principais estão em formação. Braços e pernas visíveis.', mom: 'Fadiga intensa é normal. Descanse sempre que possível.', tip: 'Inicie atividade física leve. Mantenha hidratação adequada.' },
   11: { baby: 'Bebê com 4cm. Movimentos fetais começam.', mom: 'Energia retorna. Barriga começa a aparecer.', tip: 'Doppler obstétrico pode ser realizado. Rastreamento de 1º trimestre.' },
