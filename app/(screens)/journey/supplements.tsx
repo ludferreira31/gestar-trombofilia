@@ -5,7 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { ScreenContainer } from '@/components/screen-container';
 
 const SUPPLEMENTS = [
-  { name: 'Ácido Fólico / Metilfolato', dose: '400mcg – 5mg/dia', icon: '🌿', color: '#6BAF8A', importance: 'Essencial', description: 'Prevenção de defeitos do tubo neural. Para MTHFR, prefira metilfolato.' },
+  { name: 'Ácido Fólico / Metilfolato', dose: '800mcg – 5mg/dia', icon: '🌿', color: '#6BAF8A', importance: 'Essencial', description: 'Prevenção de defeitos do tubo neural. Para MTHFR, prefira metilfolato.' },
   { name: 'Vitamina D', dose: '1.000 – 4.000 UI/dia', icon: '☀️', color: '#E8B86D', importance: 'Importante', description: 'Deficiência associada a complicações gestacionais. Dosar e suplementar conforme resultado.' },
   { name: 'Ômega-3', dose: '1g – 2g/dia', icon: '🐟', color: '#7BB8D4', importance: 'Recomendado', description: 'Propriedades anti-inflamatórias. Benefício para saúde cardiovascular e placentária.' },
   { name: 'Ferro', dose: 'Conforme exame', icon: '🔴', color: '#D4697A', importance: 'Monitorar', description: 'Previne anemia gestacional. Monitorar com hemograma periódico.' },
