@@ -745,7 +745,6 @@ async function createContext(opts) {
 }
 
 // server/_core/index.ts
-import { migrate } from "drizzle-orm/node-postgres/migrator";
 function isPortAvailable(port) {
   return new Promise((resolve) => {
     const server = net.createServer();
@@ -763,27 +762,7 @@ async function findAvailablePort(startPort = 3e3) {
   }
   throw new Error(`No available port found starting from ${startPort}`);
 }
-async function runMigrations() {
-  try {
-    if (process.env.NODE_ENV === "production" && process.env.DATABASE_URL) {
-      console.log("[db] Running migrations...");
-      const db = await getDb();
-      if (db) {
-        await migrate(db, { migrationsFolder: "./drizzle" });
-        console.log("[db] Migrations completed successfully");
-      } else {
-        console.warn("[db] Could not connect to database for migrations");
-      }
-    }
-  } catch (error) {
-    console.error("[db] Migration failed:", error);
-    if (process.env.NODE_ENV !== "production") {
-      throw error;
-    }
-  }
-}
 async function startServer() {
-  await runMigrations();
   const app = express();
   const server = createServer(app);
   app.use((req, res, next) => {
