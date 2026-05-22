@@ -7,6 +7,8 @@ import { registerOAuthRoutes } from "./oauth";
 import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
+import { migrate } from "drizzle-orm/node-postgres/migrator";
+import { db } from "../db";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise((resolve) => {
@@ -27,7 +29,26 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
   throw new Error(`No available port found starting from ${startPort}`);
 }
 
+async function runMigrations() {
+  try {
+    if (process.env.NODE_ENV === "production" && process.env.DATABASE_URL) {
+      console.log("[db] Running migrations...");
+      await migrate(db, { migrationsFolder: "./drizzle" });
+      console.log("[db] Migrations completed successfully");
+    }
+  } catch (error) {
+    console.error("[db] Migration failed:", error);
+    // Don't exit on migration failure in production - the app might still work
+    if (process.env.NODE_ENV !== "production") {
+      throw error;
+    }
+  }
+}
+
 async function startServer() {
+  // Run migrations before starting the server
+  await runMigrations();
+
   const app = express();
   const server = createServer(app);
 
