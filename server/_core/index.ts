@@ -8,7 +8,7 @@ import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { migrate } from "drizzle-orm/node-postgres/migrator";
-import { db } from "../db";
+import { getDb } from "../db";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise((resolve) => {
@@ -33,8 +33,13 @@ async function runMigrations() {
   try {
     if (process.env.NODE_ENV === "production" && process.env.DATABASE_URL) {
       console.log("[db] Running migrations...");
-      await migrate(db, { migrationsFolder: "./drizzle" });
-      console.log("[db] Migrations completed successfully");
+      const db = await getDb();
+      if (db) {
+        await migrate(db, { migrationsFolder: "./drizzle" });
+        console.log("[db] Migrations completed successfully");
+      } else {
+        console.warn("[db] Could not connect to database for migrations");
+      }
     }
   } catch (error) {
     console.error("[db] Migration failed:", error);
