@@ -1,0 +1,277 @@
+{
+  "apiRoutes": [],
+  "htmlRoutes": [
+    {
+      "file": "./(tabs)/index.tsx",
+      "page": "/(tabs)/index",
+      "namedRegex": "^(?:/\\(tabs\\))?(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./index.tsx",
+      "page": "/index",
+      "namedRegex": "^/(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/fiv.tsx",
+      "page": "/(screens)/fiv",
+      "namedRegex": "^(?:/\\(screens\\))?/fiv(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/faq.tsx",
+      "page": "/(screens)/faq",
+      "namedRegex": "^(?:/\\(screens\\))?/faq(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/about.tsx",
+      "page": "/(screens)/about",
+      "namedRegex": "^(?:/\\(screens\\))?/about(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(tabs)/guides.tsx",
+      "page": "/(tabs)/guides",
+      "namedRegex": "^(?:/\\(tabs\\))?/guides(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(tabs)/profile.tsx",
+      "page": "/(tabs)/profile",
+      "namedRegex": "^(?:/\\(tabs\\))?/profile(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(tabs)/journey.tsx",
+      "page": "/(tabs)/journey",
+      "namedRegex": "^(?:/\\(tabs\\))?/journey(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/support.tsx",
+      "page": "/(screens)/support",
+      "namedRegex": "^(?:/\\(screens\\))?/support(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/premium.tsx",
+      "page": "/(screens)/premium",
+      "namedRegex": "^(?:/\\(screens\\))?/premium(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/services.tsx",
+      "page": "/(screens)/services",
+      "namedRegex": "^(?:/\\(screens\\))?/services(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/partners.tsx",
+      "page": "/(screens)/partners",
+      "namedRegex": "^(?:/\\(screens\\))?/partners(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "expo-router/build/views/Sitemap.js",
+      "page": "/_sitemap",
+      "namedRegex": "^/_sitemap(?:/)?$",
+      "routeKeys": {},
+      "generated": true
+    },
+    {
+      "file": "./(tabs)/community.tsx",
+      "page": "/(tabs)/community",
+      "namedRegex": "^(?:/\\(tabs\\))?/community(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/birth-plan.tsx",
+      "page": "/(screens)/birth-plan",
+      "namedRegex": "^(?:/\\(screens\\))?/birth\\-plan(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./onboarding.tsx",
+      "page": "/onboarding",
+      "namedRegex": "^/onboarding(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/admin/index.tsx",
+      "page": "/(screens)/admin/index",
+      "namedRegex": "^(?:/\\(screens\\))?/admin(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/guide-detail.tsx",
+      "page": "/(screens)/guide-detail",
+      "namedRegex": "^(?:/\\(screens\\))?/guide\\-detail(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/edit-profile.tsx",
+      "page": "/(screens)/edit-profile",
+      "namedRegex": "^(?:/\\(screens\\))?/edit\\-profile(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./dev/theme-lab.tsx",
+      "page": "/dev/theme-lab",
+      "namedRegex": "^/dev/theme\\-lab(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/exams.tsx",
+      "page": "/(screens)/journey/exams",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/exams(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/diary.tsx",
+      "page": "/(screens)/journey/diary",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/diary(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./oauth/callback.tsx",
+      "page": "/oauth/callback",
+      "namedRegex": "^/oauth/callback(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/community-post.tsx",
+      "page": "/(screens)/community-post",
+      "namedRegex": "^(?:/\\(screens\\))?/community\\-post(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/history.tsx",
+      "page": "/(screens)/journey/history",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/history(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/community/gstar.tsx",
+      "page": "/(screens)/community/gstar",
+      "namedRegex": "^(?:/\\(screens\\))?/community/gstar(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/timeline.tsx",
+      "page": "/(screens)/journey/timeline",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/timeline(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/symptoms.tsx",
+      "page": "/(screens)/journey/symptoms",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/symptoms(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/prenatal.tsx",
+      "page": "/(screens)/journey/prenatal",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/prenatal(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/dopplers.tsx",
+      "page": "/(screens)/journey/dopplers",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/dopplers(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/calendar.tsx",
+      "page": "/(screens)/journey/calendar",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/calendar(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/community/births.tsx",
+      "page": "/(screens)/community/births",
+      "namedRegex": "^(?:/\\(screens\\))?/community/births(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/evolution.tsx",
+      "page": "/(screens)/journey/evolution",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/evolution(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/documents.tsx",
+      "page": "/(screens)/journey/documents",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/documents(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/community/relatos.tsx",
+      "page": "/(screens)/community/relatos",
+      "namedRegex": "^(?:/\\(screens\\))?/community/relatos(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/community/new-post.tsx",
+      "page": "/(screens)/community/new-post",
+      "namedRegex": "^(?:/\\(screens\\))?/community/new\\-post(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/supplements.tsx",
+      "page": "/(screens)/journey/supplements",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/supplements(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/medications.tsx",
+      "page": "/(screens)/journey/medications",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/medications(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/journey/enoxaparina.tsx",
+      "page": "/(screens)/journey/enoxaparina",
+      "namedRegex": "^(?:/\\(screens\\))?/journey/enoxaparina(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/community/campaigns.tsx",
+      "page": "/(screens)/community/campaigns",
+      "namedRegex": "^(?:/\\(screens\\))?/community/campaigns(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/community/legislative.tsx",
+      "page": "/(screens)/community/legislative",
+      "namedRegex": "^(?:/\\(screens\\))?/community/legislative(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/notifications-settings.tsx",
+      "page": "/(screens)/notifications-settings",
+      "namedRegex": "^(?:/\\(screens\\))?/notifications\\-settings(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(screens)/reports/gestational-report.tsx",
+      "page": "/(screens)/reports/gestational-report",
+      "namedRegex": "^(?:/\\(screens\\))?/reports/gestational\\-report(?:/)?$",
+      "routeKeys": {}
+    }
+  ],
+  "notFoundRoutes": [
+    {
+      "file": "expo-router/build/views/Unmatched.js",
+      "page": "/+not-found",
+      "namedRegex": "^(?:/(?<notfound>.+?))?(?:/)?$",
+      "routeKeys": {
+        "notfound": "not-found"
+      },
+      "generated": true
+    }
+  ],
+  "redirects": [],
+  "rewrites": []
+}
