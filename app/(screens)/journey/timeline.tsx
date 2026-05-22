@@ -13,7 +13,7 @@ const TRIMESTER_INFO = [
 ];
 
 const WEEKLY_CONTENT: Record<number, { baby: string; mom: string; tip: string }> = {
-  2: { baby: '📍 O embrião tem o tamanho de uma cabeça de alfinete (0,1-0,2mm). Implantação começando.', mom: 'Você pode não sentir nada ainda. O corpo começa a produzir hCG.', tip: 'Faça um teste de gravidez se suspeitar. Comece a tomar ácido fólico se ainda não faz.' },
+  2: { baby: '📍 O embrião tem o tamanho de uma cabeça de alfinete (0,1-0,2mm). Implantação começando.', mom: 'Você pode não sentir nada ainda. O corpo começa a produzir hCG.', tip: 'Faça um teste de gravidez se suspeitar. Comece a tomar metilfolato se ainda não faz.' },
   3: { baby: '🟢 O embrião tem o tamanho de uma lentilha (0,5-1mm). Formação do saco gestacional.', mom: 'Possível leve desconforto abdominal. Mamas podem ficar sensíveis.', tip: 'Agende uma ultrassom transvaginal para confirmar a gestação.' },
   4: { baby: '🌼 O embrião tem o tamanho de um grão de papoula (1-2mm). A implantação está ocorrendo.', mom: 'Você pode sentir cólicas leves e spotting de implantação.', tip: 'Inicie a suplementação se ainda não começou. Confirme a gestação com beta-HCG.' },
   5: { baby: '❤️ O coração começa a bater! O embrião tem cerca de 2-3mm.', mom: 'Náuseas matinais podem começar. Seios sensíveis são comuns.', tip: 'Agende sua primeira consulta pré-natal e ultrassom transvaginal. Confirme a gestação com ultrassonografia.' },
@@ -31,11 +31,19 @@ const WEEKLY_CONTENT: Record<number, { baby: string; mom: string; tip: string }>
   18: { baby: '👶 Bebê com 14cm. Todos os órgãos formados.', mom: 'Movimentos fetais mais frequentes. Barriga bem visível.', tip: 'Ultrassom morfológico de segundo trimestre pode ser realizado entre 20–24 semanas.' },
   19: { baby: '👶 Bebê com 15cm. Desenvolvimento acelerado.', mom: 'Movimentos fetais constantes. Barriga crescendo.', tip: 'Ultrassom morfológico de segundo trimestre deve ser realizado entre 20–24 semanas.' },
   20: { baby: 'Metade da gestação! Bebê com 25cm. Cabelo e sobrancelhas visíveis.', mom: 'Barriga bem visível. Movimentos fetais mais frequentes.', tip: 'Realize o ultrassom morfológico de 2º trimestre. Doppler de artérias uterinas.' },
-  24: { baby: 'Bebê com 30cm. Pulmões em desenvolvimento. Viabilidade fetal.', mom: 'Possível dor lombar. Barriga crescendo rapidamente.', tip: 'Realize o teste de tolerância à glicose (diabetes gestacional).' },
-  28: { baby: 'Início do 3º trimestre! Bebê com 37cm. Olhos abrem e fecham.', mom: 'Possível inchaço nos pés e tornozelos. Dificuldade para dormir.', tip: 'Ultrassom de crescimento fetal e doppler umbilical.' },
-  31: { baby: 'Bebê com 40cm. Pulmões quase maduros. Posição cefálica esperada.', mom: 'Contrações podem ser normais, desde que não estejam em excesso.', tip: 'Perfil biofísico fetal. Avalie posição do bebê.' },
-  32: { baby: 'Bebê com 42cm. Pulmões quase maduros. Posição cefálica esperada.', mom: 'Contrações podem ser normais, desde que não estejam em excesso.', tip: 'Perfil biofísico fetal. Avalie posição do bebê.' },
-  36: { baby: 'Bebê com 47cm. Praticamente pronto para o mundo!', mom: 'Descida do bebê na pelve. Aumento da pressão pélvica.', tip: 'Planejamento do plano de parto. Discuta suspensão da heparina.' },
+  21: { baby: '👶 Bebê com 27cm. Desenvolvimento acelerado.', mom: 'Barriga bem visível. Movimentos fetais constantes.', tip: 'Acompanhe o desenvolvimento fetal. Ultrassom de crescimento pode ser realizado.' },
+  22: { baby: '👶 Bebê com 28cm. Pele ainda enrugada.', mom: 'Barriga crescendo. Movimentos fetais mais intensos.', tip: 'Ultrassom de crescimento fetal pode ser agendado.' },
+  24: { baby: '👶 Bebê com 30cm. Pulmões em desenvolvimento. Viabilidade fetal.', mom: 'Possível dor lombar. Barriga crescendo rapidamente.', tip: 'Realize o teste de tolerância à glicose (diabetes gestacional).' },
+  25: { baby: '👶 Bebê com 32cm. Pele ainda enrugada, mas mais lisa.', mom: 'Barriga bem pronunciada. Movimentos fetais frequentes.', tip: 'Ultrassom de crescimento fetal e doppler umbilical.' },
+  26: { baby: '👶 Bebê com 33cm. Pulmões em desenvolvimento.', mom: 'Inchaço nos pés e tornozelos. Dificuldade para dormir.', tip: 'Realize ecocardiografia fetal.' },
+  27: { baby: '👶 Bebê com 34cm. Desenvolvimento rápido.', mom: 'Inchaço nos pés e tornozelos no final do dia. Dificuldade para dormir.', tip: 'Ultrassom de crescimento fetal e doppler umbilical.' },
+  28: { baby: 'Início do 3º trimestre! Bebê com 35cm. Olhos abrem e fecham.', mom: 'Possível inchaço nos pés e tornozelos. Dificuldade para dormir.', tip: 'Ultrassom de crescimento fetal e doppler umbilical.' },
+  29: { baby: '👶 Bebê com 37cm. Pulmões quase maduros.', mom: 'Contrações podem ser normais, desde que não estejam em excesso.', tip: 'Perfil biofísico fetal. Avalie posição do bebê.' },
+  31: { baby: '👶 Bebê com 40cm. Pulmões quase maduros. Posição cefálica esperada.', mom: 'Contrações podem ser normais, desde que não estejam em excesso.', tip: 'Perfil biofísico fetal. Avalie posição do bebê.' },
+  32: { baby: '👶 Bebê com 42cm. Pulmões quase maduros. Posição cefálica esperada.', mom: 'Contrações podem ser normais, desde que não estejam em excesso.', tip: 'Perfil biofísico fetal. Avalie posição do bebê.' },
+  33: { baby: '👶 Bebê com 43cm. Praticamente pronto para o mundo!', mom: 'Descida do bebê na pelve. Aumento da pressão pélvica.', tip: 'Perfil biofísico fetal. Avalie posição do bebê.' },
+  34: { baby: '👶 Bebê com 45cm. Praticamente pronto para o mundo!', mom: 'Descida do bebê na pelve. Aumento da pressão pélvica.', tip: 'Perfil biofísico fetal. Avalie posição do bebê.' },
+  36: { baby: '👶 Bebê com 47cm. Praticamente pronto para o mundo!', mom: 'Descida do bebê na pelve. Aumento da pressão pélvica.', tip: 'Planejamento do plano de parto. Discuta suspensão da heparina e AAS (ácido acetilsalicílico).' },
   37: { baby: 'Gestação a termo! Bebê completamente desenvolvido.', mom: 'Qualquer sinal de trabalho de parto deve ser avaliado.', tip: 'Tenha o plano de parto pronto. Mala da maternidade preparada.' },
   40: { baby: 'Data provável do parto! Bebê com cerca de 3,5kg e 50cm.', mom: 'Aguardando o momento especial com ansiedade e amor.', tip: 'Mantenha contato próximo com sua equipe médica. Você chegou até aqui! 💜' },
 };
