@@ -7,7 +7,6 @@ services:
     databaseName: gestar_trombofilia_db
     user: gestar_user
     postgresMajorVersion: 15
-    preDeployCommand: pnpm db:push
     region: ohio
 
   # Web Service (Node.js Backend + Expo Web Frontend)
