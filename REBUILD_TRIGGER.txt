@@ -1,0 +1,8 @@
+Trigger de rebuild para Vercel - Forçar recompilação completa
+Timestamp: 2026-05-22T05:21:00Z
+Motivo: Invalidar cache de build antigo que não contém correções clínicas da timeline
+Alterações incluídas:
+- Semana 2: metilfolato
+- Semana 21: com 27cm
+- Semana 36: AAS (ácido acetilsalicílico)
+- Todas as 25 semanas com conteúdo atualizado
