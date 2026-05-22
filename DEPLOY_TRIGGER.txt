@@ -1,0 +1,10 @@
+Deploy trigger: Fix db import error
+Timestamp: 2026-05-22 17:25:00
+Commit: 770f5cd - Fix: Correct db import in server startup
+
+Changes:
+- Fixed import from `import { db }` to `import { getDb }`
+- Updated runMigrations() to use getDb() correctly
+- Build now compiles successfully
+
+This file triggers a rebuild on Render.
