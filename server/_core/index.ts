@@ -58,6 +58,16 @@ async function startServer() {
   registerStorageProxy(app);
   registerOAuthRoutes(app);
 
+  app.get("/", (_req, res) => {
+    res.json({
+      app: "Gestar com Trombofilia",
+      status: "running",
+      timestamp: Date.now(),
+      api: "/api/trpc",
+      health: "/api/health"
+    });
+  });
+
   app.get("/api/health", (_req, res) => {
     res.json({ ok: true, timestamp: Date.now() });
   });
